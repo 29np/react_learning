@@ -7,9 +7,9 @@ function ExpenseItem(props) {
   // react passes all the parameters as props object
   const [title, setTtile] = useState(props.title);
 
-  function clickHandler() {
-    setTtile("Updated!");
-  }
+  // function clickHandler() {
+  //   setTtile("Updated!");
+  // }
   return (
     <Card className="expense-item">
       <ExpenseDate date={props.date} />
@@ -17,10 +17,10 @@ function ExpenseItem(props) {
         <h2>{title}</h2>
         <div className="expense-item__price">${props.amount}</div>
       </div>
-      <button onClick={clickHandler}>Change Title</button>
+      {/* <button onClick={clickHandler}>Change Title</button> */}
     </Card>
   );
 }
 // Ctrl + Shift + I // to auto format;
-// ExpenseItem can return only one compotent do put multiple components inside div
+// ExpenseItem can return only one compotent so put multiple components inside div
 export default ExpenseItem;

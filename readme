@@ -15,4 +15,6 @@ npx create-react-app react-complete-guide
 npm install // to install the dependencies of a project
 npm start // to start the project
 
+Format shortcut - Ctrl + Shift + I
 
+git push origin HEAD:main
