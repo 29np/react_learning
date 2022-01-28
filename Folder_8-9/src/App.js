@@ -11,10 +11,12 @@ const App = () => {
     });
   };
   return (
-    <div>
+    <>
       <AddUser onAddUser={onAddUserHandler}/>
       <UserList users={Ul}/>
-    </div>
+    </> // This is fragments
+    // Fragments allow us to write cleaner code and helps adding unnecessary html tags.
+
   );
 };
 
