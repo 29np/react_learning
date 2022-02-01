@@ -60,8 +60,12 @@ arr3.push(8);
 arr4.push(9);
 console.log(arr4, arr3);
 
+// REST, can pass as many arguments as we like, it stores in array
+const filter = (...arggss) => {
+    return arggss.filter(el => el === 1);  
+}
 
-// Array Destructing
+// Array Destructing 
 [num1, , num3] = arr4;
 console.log(num1, num3);
 
