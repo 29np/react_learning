@@ -3,33 +3,26 @@ import Parent from "./Parent";
 import Child from "./Child";
 import Child1 from "./Child1";
 import ReactGrid from "./ReactGrid";
+import ReactGridFn2 from "./ReactGridFn2";
 
 function App() {
-  console.log("In Grand Parent");
-  const [v, setV] = useState("Hello");
+  const [v, setV] = useState("1000px");
 
-  let temp = [];
-
-  useEffect(() => {
-    temp = [0, 0, 0].map(() => {
-      return <Child1 v={v} />;
-    });
-  }, [v]);
+  return <ReactGridFn2 />;
   return (
     <>
-      {/* {v}
       <button
         onClick={() => {
-          setV((Math.random() + 1).toString(36).substring(7));
+          if (v === "500px") setV("1000px");
+          else setV("500px");
         }}
       >
-        Change Text
+        Set Size
       </button>
-      <br />
-      <Child v={v} />
-      <br />
-      {temp} */}
-      <ReactGrid />
+      <div style={{ width: v, backgroundColor: "wheat" }}>
+        {/* <ReactGridFn1 /> */}
+      </div>
+      {/* <ReactGrid /> */}
     </>
   );
 }
